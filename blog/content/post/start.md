@@ -9,7 +9,7 @@ title: 重新出发
 - vim txt
 - Emacs muse / org
 - 各种格式及编辑器（如：LaTeX, rst, Markdown 等）
-- 使用 Python, ReactJS 等开发多个 Blog Site
+- 不同时期，使用 Golang, Python, ReactJS, AngularJS 等开发多个 Blog Site
 - 印象笔记 , Notion
 
 从个人经验来看，我认为记录笔记是自学过程中非常重要的一个习惯，但理解记录笔记的核心更为重要。
