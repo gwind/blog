@@ -1,0 +1,50 @@
+baseURL = "https://gwind.me"
+languageCode = "zh-cn"
+title = "Happy Hacking"
+
+disqusShortname = "gwind"
+
+defaultContentLanguage = "zh-cn"
+theme = "kiss"
+copyright = "&copy; <a href=\"https://gwind.me\">gwind</a> 2020"
+
+googleAnalytics = ""
+Paginate = 50 # Number of posts per page
+enableRobotsTXT = true
+
+pygmentsCodeFences = true
+pygmentsStyle = "monokai"
+# pygmentsUseClasses = true
+pygmentsCodefencesGuessSyntax = true
+
+[params.rss] # Adding this tag enables RSS feed
+includeContent = true # Includes whole content in rss
+authorName = "gwind" # Author full name
+authorEmail = "gwindfree@gmail.com" # Author email
+
+[params.assets]
+customCSS = ["css/custom.css"]
+
+[params.info]
+adsense = "" # Adsense ID (ID only, without ca-pub-)
+enableSocial = true # Adds OpenGraph and Twitter cards
+homeTitle = "gwind's personal site" # Title for home page
+poweredby = true # Adds powered by hugo and kiss below Copyright
+related = true # Includes related articles at the bottom of the article
+codeCopy = true # Add copy button above code blocks
+
+[params.social]
+twitter = "gwindfree"
+github = "gwind"
+email = "gwindfree@gmail.com"
+linkedin = ""
+facebook = ""
+instagram = ""
+codepen = ""
+rss = "index.xml" # Add this to show RSS button in social.
+
+[params.social.config]
+platforms = ["github","twitter","email"]
+
+[params.features]
+disqusOnDemand = true  # Load Disqus comments on click
