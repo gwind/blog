@@ -1,10 +1,5 @@
 ---
-date: 2020-01-15
-linktitle: Start
-menu:
-  main:
-    parent: tutorials
-prev: /tutorials/mathjax
+date: "2020-01-15"
 title: 重新出发
 ---
 
@@ -13,7 +8,7 @@ title: 重新出发
 - 纸质笔记本
 - vim txt
 - Emacs muse / org
-- 各种格式及编辑器（如：Markdown, rst 等）
+- 各种格式及编辑器（如：LaTeX, rst, Markdown 等）
 - 自学 Python 开发多个 Blog Site
 - 印象笔记 , Notion
 
