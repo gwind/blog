@@ -277,7 +277,7 @@ peer: <VPS 3 的公网IP>
 
 ## FAQ
 
-### 增加 wireguard 节点
+### 如何增加一个新的 wireguard 节点？
 
 每增加一个 wireguard 节点，都在要 **VPS 3** 上的 `/etc/wireguard/wg0.conf` 添加 Peer 配置，示例：
 
@@ -293,7 +293,7 @@ AllowedIPs = 6.6.6.7/32
 systemctl restart wg-quick@wg0.service
 ```
 
-### 节点之间无法 ping 通
+### 节点之间无法 ping 通怎么办？
 
 如果节点之间无法 ping 通，请在 **VPS 3** 添加 iptables 规则：
 
