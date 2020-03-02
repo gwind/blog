@@ -299,6 +299,6 @@ iptables -t filter -A FORWARD -o wg0 -j ACCEPT
 
 ## 参考
 
-- [WireGuard](https://www.wireguard.com/) - 可以无法直接访问
+- [WireGuard](https://www.wireguard.com/) - 你的网络中可能无法直接访问
 - [goproxy](https://github.com/ooclab/goproxy) - 比如 git 如何配置等
 - [otunnel](https://github.com/ooclab/otunnel) - 点对点加密隧道，最简单的双向端口映射工具
