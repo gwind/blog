@@ -138,7 +138,7 @@ PersistentKeepalive = 25
 
 ## 代理
 
-### 在 虚拟机 3 启动代理服务
+### 在 虚拟机 4 启动代理服务
 
 我们使用 docker-compose 启动2个代理服务：
 
