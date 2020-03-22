@@ -291,11 +291,37 @@ systemctl restart wg-quick@wg0.service
 
 ### 节点之间无法 ping 通怎么办？
 
+
+#### 尝试 1
+
 如果节点之间无法 ping 通，请在 **虚拟机 3** 添加 iptables 规则：
 
 ```
 iptables -t filter -A FORWARD -o wg0 -j ACCEPT
 ```
+
+#### 尝试 2
+
+或者查看 ipv4 的转发设置是否打开：
+
+```
+cat /proc/sys/net/ipv4/ip_forward
+```
+
+打开转发：
+
+```
+echo 1 > /proc/sys/net/ipv4/ip_forward
+```
+
+永久打开转发，在 /etc/sysctl.conf 文件追加：
+
+```
+net.ipv4.ip_forward = 1
+```
+
+即可。
+
 
 ## 参考
 
