@@ -1,0 +1,20 @@
+<section class="section">
+  <div class="container has-text-centered">
+    <p><a href="https://m.do.co/c/1b1aa358e678">DigitalOcean Referral Link</p>
+    <p>{{ .Site.Copyright | safeHTML }}</p>
+    {{if .Site.Params.Info.poweredby}}
+      <p>Powered by <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/ribice/kiss">Kiss</a>.</p>
+    {{ end }}
+  </div>
+</section>
+{{ if .Site.GoogleAnalytics }}
+{{ template "_internal/google_analytics_async.html" . }}
+{{ end }}
+{{ if .Site.Params.matomoAnalytics }}
+{{- partial "analytics/matomo" . -}}
+{{ end }}
+{{ if .Site.Params.fathomAnalytics }}
+{{- partial "analytics/fathom" . -}}
+{{ end }}
+</body>
+</html>
