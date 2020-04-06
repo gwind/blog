@@ -5,7 +5,7 @@ title = "Better to Light a Candle Than to Curse the Darkness"
 disqusShortname = "gwind"
 
 defaultContentLanguage = "zh-cn"
-theme = "kiss"
+theme = "kiss_custom"
 copyright = "&copy; <a href=\"https://gwind.me\">gwind</a> 2020"
 
 googleAnalytics = ""
