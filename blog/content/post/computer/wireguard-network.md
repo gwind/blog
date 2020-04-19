@@ -146,6 +146,7 @@ PersistentKeepalive = 25
 mkdir -pv /srv/lab/proxy/
 cd /srv/lab/proxy/
 vi docker-compose.yaml
+vi squid.conf
 ```
 
 `docker-compose.yaml` 内容如下：
@@ -157,11 +158,28 @@ services:
     image: sameersbn/squid:3.3.8-20
     ports:
     - 6.6.6.6:3128:3128
+    volumes:
+    - ./squid.conf:/etc/squid/squid.conf
 
   goproxy:
     image: ooclab/goproxy:v1.0.0
     ports:
     - 6.6.6.6:8000:8000
+```
+
+`squid.conf` 配置如下：
+
+```
+acl Safe_ports port 80 # http
+acl Safe_ports port 443 # https
+acl CONNECT method CONNECT
+http_access allow all
+http_port 3128
+visible_hostname proxy
+header_access Via deny all
+header_access X-Forwarded-For deny all
+forwarded_for off
+via off
 ```
 
 启动服务
@@ -321,6 +339,11 @@ net.ipv4.ip_forward = 1
 ```
 
 即可。
+
+
+## 感谢
+
+- Squid 配置，感谢 [Haoliang Zhang](https://github.com/12441409) 提供配置并测试
 
 
 ## 参考
