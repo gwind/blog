@@ -210,6 +210,26 @@ docker-compose up -d
 }
 ```
 
+#### FAQ: 如果出现错误 `FATAL: xcalloc: Unable to allocate 1048576 blocks of 392 bytes!`
+
+```
+FATAL: xcalloc: Unable to allocate 1048576 blocks of 392 bytes!
+```
+
+可以考虑使用文件作为 swap ，增大交换分区大小：
+
+```
+fallocate -l 2G /swapfile
+ls -lh /swapfile
+chmod 600 /swapfile
+mkswap /swapfile
+swapon /swapfile
+free
+```
+
+重启 squid 
+
+
 ### 在笔记本 2 使用代理服务
 
 #### chrome
